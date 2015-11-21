@@ -4,7 +4,7 @@ class DuneGeometry < Formula
   sha256 "caf8f55b79e3217c3e845a9ada48b51a57f090cbbd4e6994e72067f3449b565c"
 
   depends_on "cmake"
-  depends_on "homebrew-wunderland/dune-common"
+  depends_on "easior/homebrew-wunderland/dune-common"
 
   patch :p2 do
     url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_geometry_cmake.patch"

@@ -4,8 +4,8 @@ class DuneGrid < Formula
   sha256 "f565d3c2562275cba317adef74f75b0a4f6f130abf4e9e1c34712bc9ab63ab03"
 
   depends_on "cmake"
-  depends_on "homebrew-wunderland/dune-common"
-  depends_on "homebrew-wunderland/dune-geometry"
+  depends_on "easior/homebrew-wunderland/dune-common"
+  depends_on "easior/homebrew-wunderland/dune-geometry"
 
   patch :p2 do
     url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_grid_cmake.patch"

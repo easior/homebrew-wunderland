@@ -11,10 +11,10 @@ class DunePdelab < Formula
 
   # depends_on "cmake" => :build
   depends_on :x11 # if your formula requires any X11/XQuartz components
-  depends_on "homebrew-wunderland/dune-common"
-  depends_on "homebrew-wunderland/dune-geometry"
-  depends_on "homebrew-wunderland/dune-grid"
-  depends_on "homebrew-wunderland/dune-typetree"
+  depends_on "easior/homebrew-wunderland/dune-common"
+  depends_on "easior/homebrew-wunderland/dune-geometry"
+  depends_on "easior/homebrew-wunderland/dune-grid"
+  depends_on "easior/homebrew-wunderland/dune-typetree"
   
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel

@@ -4,8 +4,8 @@ class DuneLocalfunctions < Formula
   sha256 "92c2380f58c7c5f6ff6eb0f4ac694626c3bc81686cbef4534bfb44e351f0b771"
 
   depends_on "cmake"
-  depends_on "homebrew-wunderland/dune-common"
-  depends_on "homebrew-wunderland/dune-geometry"
+  depends_on "easior/homebrew-wunderland/dune-common"
+  depends_on "easior/homebrew-wunderland/dune-geometry"
 
     
   def install
