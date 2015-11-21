@@ -5,7 +5,7 @@ class DuneAlugrid < Formula
   version "2.3-dev"
 
   depends_on "cmake"
-  depends_on "easior/homebrew-wunderland/dune-grid"
+  depends_on "easior/wunderland/dune-grid"
 
   def install
 

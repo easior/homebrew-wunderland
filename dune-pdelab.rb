@@ -4,28 +4,32 @@
 
 class DunePdelab < Formula
   desc ""
-  homepage ""
+  homepage "http://dune-project.org/"
   url "http://dune-project.org/download/pdelab/2.0/dune-pdelab-2.0.0.tar.bz2"
   version "2.0.0"
   sha256 "f34dddc914a5cf6581e9ce067e04ba6bf8f495044ec1736d83ad6a7b2605a4a7"
 
-  # depends_on "cmake" => :build
-  depends_on :x11 # if your formula requires any X11/XQuartz components
-  depends_on "easior/homebrew-wunderland/dune-common"
-  depends_on "easior/homebrew-wunderland/dune-geometry"
-  depends_on "easior/homebrew-wunderland/dune-grid"
-  depends_on "easior/homebrew-wunderland/dune-typetree"
+  depends_on "cmake"
+  depends_on "easior/wunderland/dune-common"
+  depends_on "easior/wunderland/dune-geometry"
+  depends_on "easior/wunderland/dune-grid"
+  depends_on "easior/wunderland/dune-istl"
+  depends_on "easior/wunderland/dune-typetree"
   
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
 
-    # Remove unrecognized options if warned by configure
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
-    system "make", "install" # if this fails, try separate make/make install steps
+    mkdir "build" do
+      args = std_cmake_args
+      args.delete "-DCMAKE_CXX_FLAGS_RELEASE="
+      args.delete "-DCMAKE_C_FLAGS_RELEASE="
+      args << "-DCMAKE_C_FLAGS_RELEASE=-O3 -march=native"
+      args << "-DCMAKE_CXX_FLAGS_RELEASE=-O3 -march=native"
+      args << "-DBUILD_SHARED_LIBS=TRUE"
+      args << ".."
+
+      system "cmake", *args
+      system "make","install"
+    end
   end
 
   test do

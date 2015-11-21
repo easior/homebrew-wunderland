@@ -5,7 +5,7 @@ class DuneFoamgrid < Formula
   version "2.3-dev"
 
   depends_on "cmake"
-  depends_on "easior/homebrew-wunderland/dune-grid"
+  depends_on "easior/wunderland/dune-grid"
 
 #  patch :p2 do
 #    url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_foamgrid_cmake.patch"
