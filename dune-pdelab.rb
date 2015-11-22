@@ -10,7 +10,6 @@ class DunePdelab < Formula
   sha256 "f34dddc914a5cf6581e9ce067e04ba6bf8f495044ec1736d83ad6a7b2605a4a7"
 
   depends_on "cmake"
-  depends_on "easior/wunderland/dune-common"
   depends_on "easior/wunderland/dune-geometry"
   depends_on "easior/wunderland/dune-grid"
   depends_on "easior/wunderland/dune-istl"
