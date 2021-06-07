@@ -9,7 +9,7 @@ class DuneIstl < Formula
   sha256 "fcc754ce7d8b21d6b2fe3ef66a5d1172b52afd8679ef6b2a4f916312491c36fa"
   
   depends_on "cmake"
-  depends_on :x11 # if your formula requires any X11/XQuartz components
+  depends_on :libx11 # if your formula requires any X11/XQuartz components
   depends_on "easior/wunderland/dune-common"
   
   def install
