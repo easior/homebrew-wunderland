@@ -1,4 +1,4 @@
-class wxsqlite3 < Formula
+class WxSQLite3 < Formula
   desc "wxSQLite3 - SQLite3 database wrapper for wxWidgets (including SQLite3 encryption extension)"
   homepage "http://utelle.github.io/wxsqlite3"
   url "https://github.com/utelle/wxsqlite3/archive/refs/tags/v4.7.3.tar.gz"
