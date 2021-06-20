@@ -8,16 +8,14 @@ class Xlsxio < Formula
   sha256 "0b6b4244420e8a2f492d09eae2abd6562c3113c22997673b0f2560bdb06d072f"
   license "MIT"
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
   depends_on "libzip"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", "--prefix=#{prefix}", "--with-libzip", "--disable-silent-rules"
-    system "make", "install"
+    #system "./configure", "--prefix=#{prefix}", "--with-libzip", "--disable-silent-rules"
+    system "make", "install", "--prefix=#{prefix}", "WITH_LIBZIP=1"
   end
 
   test do
