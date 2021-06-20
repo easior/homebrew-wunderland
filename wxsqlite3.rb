@@ -6,11 +6,12 @@ class Wxsqlite3 < Formula
   license "LGPL-3.0+"
 
   depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "sqlite3"
   depends_on "wxmac"
   
   def install
-    system "autoreconf"
+    system "autoreconf", "-i"
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
