@@ -8,7 +8,7 @@ class Wxsqlite3 < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "wxmac"
+  depends_on "wxwidgets"
   
   def install
     system "autoreconf", "-i"
